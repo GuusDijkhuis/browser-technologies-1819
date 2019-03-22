@@ -14,9 +14,15 @@ Gebruik onderstaande artikelen om je code te optimaliseren en om je voor te bere
 - [The accessibility mindset](https://24ways.org/2015/the-accessibility-mindset/)  
 
 
-### Criteria
-- Zet je code op Github
-- Schrijf een Readme met:
-  - een beschrijving van alle features die je hebt getest
-  - een beschrijving van de Device lab test en screenreader test.
-  - beschrijf hoe je de problemen hebt opgelost, of hoe je dit zou oplossen (met todo’s) als je genoeg tijd en budget zou hebben
+## Wat heb je getest
+### Device lab
+### Screenreader
+## Testuitslagen
+### Device lab
+### Screenreader
+
+## Oplossingen voor bovenstaande problemen.
+- [ ]
+- [ ]
+- [ ]
+- [ ]

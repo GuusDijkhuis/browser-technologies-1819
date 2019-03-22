@@ -1,4 +1,11 @@
 # Browser Technologies
+## Use Case
+`Ik wil een notificatie krijgen als mijn favoriete sportteam heeft gescoord.`
+
+
+
+
+
 ## Opdracht 2 - Progressive Enhanced Browser Technologie
 Het Web laten 'breken' door features van het platform bewust uit te zetten. Images, custom fonts, JavaScript, kleur, breedband internet.
 

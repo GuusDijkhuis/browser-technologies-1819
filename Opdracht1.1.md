@@ -1,42 +1,37 @@
 # Browser Technologies
 ## Opdracht 1.1 - Breek het web
-Het Web laten 'breken' door features van het platform bewust uit te zetten. Images, custom fonts, JavaScript, kleur, breedband internet.
+De 2 criteria waar ik onderzoek naar gedaan heb:
+- Kleur
+- Geen muis/trackpad/touchpad
 
-### Doel van deze opdracht
-Het doel van deze opdracht is om erachter komen dat je misschien aannames hebt die niet kloppen, en om je in te laten leven in de eindgebruiker.
+## Kleur
+### Welke problemen zijn er?
+Websites waar de kleuren niet goed zijn kunnen heel vervelend zijn voor de gebruiker als deze bijvoorbeeld kleurenblind is. De grootste problemen die kleurenblinden hebben zijn:
+- Het verkeerd lezen of begrijpen van grafieken en diagrammen
+- Color Pickers
+- Toggles
+- Error messages
+- Link
+- Contrasts
 
-### Uitleg
-Onderzoek minimaal twee features. Dat betekent uitvogelen wat het voor impact heeft op de sites die je kent en normaal gebruikt. Zoek uit hoe je de feature kan testen. Kies sites in je directe omgeving: van je werkgever, lokale vereniging, de cafetaria om de hoek, en/of eerdere projecten die je zelf gedaan hebt. Onderzoek de problemen, cijfers en/of meningen. Bedenk ook hoe je de problemen zou kunnen oplossen. 
-Gebruik onderstaande artikelen bij je onderzoek.
+(Bron: `https://axesslab.com/colorblind-accessibility-web-fail-success-cases/`)
 
-1. Afbeeldingen uitzetten
-2. Custom fonts uitzetten
-3. Kleur uitzetten & kleurenblindheid instellen
-4. Muis/Trackpad werkt niet
-5. Breedband internet uitzetten
-6. Javascript (volledig)
-7. Cookies
-8. localStorage doet het niet
+Van alle mannen is 1 op de 12 erfelijke kleurenblind in tegenstelling tot de vrouwen waar 1 op de 250 kleurenblind is door ergelijke afwijking.
 
-Optioneel mag je ook één van deze features onderzoeken:
-- a. Wifi hotspots/HTTPS
-- b. Content blockers
-- c. CDN’s
-- d. Ad blockers (privacy)
-- e. Browser detect
+### Hoe zet je dit uit?
+Je kunt meerdere extensies gebruiken om kleurenblindheid na te  bootsen. Ik heb de extensie `Colorblinding` gebruikt om de testen uit te voeren.  
 
+### Beschrijf hoe je dit kan fiksen
+Overal waar je met kleur moet uitleggen geef ook de labels weer. Zoal diagrammen, grafieken als colorpickers zijn hier goede voorbeelden voor.
 
-Lezen
-- [The Web I Want](https://dev.to/quii/the-web-i-want-43o)
-- [The Role of Enhancement in Web Design
-by Raluca Budiu](https://www.nngroup.com/articles/enhancement/)
+### Voorbeeldwebsites
 
+## Geen muis/trackpad/touchpad
+### Welke problemen zijn er?
+Websites waar je geen trackpad kan gebruiken zijn vervelend voor mensen met een fysieke beperking.
 
+### Hoe zet je dit uit?
+Ik heb voor mijn test een grote post-it geplakt op mijn touchpad waardoor ik echt mijn touchpad niet kan gebruiken.
 
-### Criteria
-Je krijgt 2 features van de 8
-- Zoek uit welke problemen ze kunnen veroorzaken (verzamel cijfers, meningen, ervaringen)
-- Zoek uit hoe je dit kunt testen (hoe kun je een feature ‘uitzetten’)
-- Vind een aantal sites waar dit ook problemen oplevert (uit je directe omgeving)
-- Beschrijf hoe je dit kan fiksen
-- Maak hierover een presentatie en neem die woensdag mee, dan gaan we de resultaten bespreken
+### Beschrijf hoe je dit kan fiksen
+Je met ervoor zorgen dat de website goed navigeert als je alleen met 1 knop werkt, bijvoorbeeld de `tab`. Dit kun je doen door de `:focus` 
