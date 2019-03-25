@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  {{> head }}
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Score</li>
+          <li>Your profile</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Score</h1>
+      <form class="" action="/change-score" method="post">
+        <section class="teamSection">
+          <h2>AJAX</h2>
+          <label for="scoreHome">Score Home</label>
+          <input type="number" name="scoreHome" min="0" max="50" value="{{ homeTeam.score }}" placeholder="0">
+          <label for="yellowCardsHome">Yellow Cards</label>
+          <input type="number" name="yellowCardsHome" min="0" max="22" value="{{ homeTeam.yellowCards }}" placeholder="0">
+          <label for="redCardsHome">Red Cards</label>
+          <input type="number" name="redCardsHome" min="0" max="5" value="{{ homeTeam.yellowCards }}" placeholder="0">
+          <label for="foulsHome">Fouls</label>
+          <input type="number" name="foulsHome" min="0" max="100" value="{{ homeTeam.fouls }}" placeholder="0">
+        </section>
+        <section class="teamSection">
+          <h2>PSV</h2>
+          <label for="scoreAway">Score Away</label>
+          <input type="number" name="scoreAway" min="0" max="50" value="{{ awayTeam.score }}" placeholder="0">
+          <label for="yellowCardsAway">Yellow Cards</label>
+          <input type="number" name="yellowCardsAway" min="0" max="22" value="{{ awayTeam.yellowCards }}" placeholder="0">
+          <label for="redCardsAway">Red Cards</label>
+          <input type="number" name="redCardsAway" min="0" max="5" value="{{ awayTeam.yellowCards }}" placeholder="0">
+          <label for="foulsAway">Fouls</label>
+          <input type="number" name="foulsAway" min="0" max="100" value="{{ awayTeam.fouls }}" placeholder="0">
+        </section>
+        <input type="submit" name="button" value="submit">
+      </form>
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>

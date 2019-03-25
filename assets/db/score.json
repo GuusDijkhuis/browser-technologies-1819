@@ -1,0 +1,16 @@
+{
+  "data": {
+    "homeTeam": {
+      "score": "6",
+      "yellowCards": "2",
+      "redCards": "2",
+      "fouls": "1"
+    },
+    "awayTeam": {
+      "score": "2",
+      "yellowCards": "1",
+      "redCards": "1",
+      "fouls": "1"
+    }
+  }
+}
