@@ -197,3 +197,17 @@ form input[type='submit'] {
   margin: 0 auto;
   display: block;
 }
+
+.update-pop-up {
+  position: absolute;
+  right: 1rem;
+  background: white;
+  border-radius: 5px;
+  top: 1rem;
+  height: auto;
+  width: 2rem;
+  padding: .5rem;
+}
+.update-pop-up img {
+  width: 100%;
+}
