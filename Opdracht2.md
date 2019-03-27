@@ -1,58 +1,56 @@
 # Browser Technologies
 ## Use Case
-`Ik wil een notificatie krijgen als mijn favoriete sportteam heeft gescoord.`
+`Ik wil de scores van een sportwedstrijd kunnen bijhouden tijdens de wedstrijd`
+## Summary
+Score is een applicatie waar je de verschillende gebeurtenissen van een voetbalwedstrijd kunt bijhouden.
 
+![Score](/readme/img/screenshot.png)
 
+## Table of contents
+- [Use Case](#Use-Case)
+- [Summary](#Install)
+- [Live demo](#Live-Demo)
+- [Installation](#Installation)
+- [Concept](#Concept)
+- [Progressive Enhancement](#Feature-Detection)
+- [Feature Detection](#Feature-Detection)
 
+## Live Demo
+[Hier](https://guusdijkhuis.github.io/browser-technologies-1819/) is de link voor de live demo
 
+## Installation
+Als je mijn code wilt gebruiken kun je met de onderstaande mijn code clonen.
+`git clone https://github.com/GuusDijkhuis/browser-technologies-1819.git`
 
-## Opdracht 2 - Progressive Enhanced Browser Technologie
-Het Web laten 'breken' door features van het platform bewust uit te zetten. Images, custom fonts, JavaScript, kleur, breedband internet.
+## Concept
+![Wireflow](/readme/img/wireflow.png)
+Als je een score wilt bijhouden dan kunt u dat doen door de score aan te passen met de pijltjes. De score wordt meestal automatisch opgeslagen maar er kan ook een opslaan knop staan. De functional laag is gebouwd dat je met de knop de aangegeven scores kan opsturen naar de server. Als usable heb ik gedaan dat als Javascript aan staat het formulier automatisch wordt doorgegeven aan de server als er een verandering is in 1 van de inputfields. Als pleasurable heb ik ook nog de logo's toegevoegd die eigenlijk niet nodig zijn aangezien al de naam van het team in beeld staat. Daarnaast heb ik een pop-up gemaakt die verschijnt als een request wordt gestuurd naar de server.
 
-### Doel van deze opdracht
-Het doel van deze opdracht is om erachter komen dat je misschien aannames hebt die niet kloppen, en om je in te laten leven in de eindgebruiker.
+## Features
 
-### Uitleg
-Maak een demo op basis van een use case. Zorg dat alle gebruikers, met alle browsers, in iedere context minimaal de core functionaliteit te zien/horen/voelen krijgen en maximaal een hele goede UX.
+#### Color
+De features die ik heb aangepakt in mijn applicatie zijn onder andere de kleur. Ik heb de website met zo veel mogelijk contrast gemaakt. Ik heb het contrast ook getest met meerdere contrast checkers. Op `Color Review` wordt aangegeven dat voor zowel de headers en de text `AAA` is. Dit is de maximale score om contrast goed te hebben.
+- [Contrast Checker 1](https://webaim.org/resources/contrastchecker/?fcolor=FFFFFF&bcolor=353C45)
+- [Contrast Checker 2](https://color.review/check/FFFFFF-353C45)
 
-Bouw je demo in 3 lagen, volgens het principe van Progressive Enhancement.
+#### Images
+Als er geen images geladen kunnen worden dan kun je de `alt-text` zien die aangeeft om welk logo het gaat.
 
-Gebruik als enhancement een (innovatieve, vooruitstrevende, onbekende, nieuwe) [Browser Technologie](https://platform.html5.org) die je gaat onderzoeken op functionaliteit, toegankelijkheid en (browser) ondersteuning. Je onderzoekt hoe je verschillende features door verschillende browsers worden ondersteund en hoe je voor goede fallback kan zorgen. Test de features op verschillende browsers en het Device Lab. Polyfills en NPM is niet toegestaan.
+Images             |  No Images
+:-------------------------:|:-------------------------:
+![](/readme/img/IMG.png)  |  ![](/readme/img/no-IMG.png)
 
-Gebruik [html5test.com](https://html5test.com), [css3test.com](http://css3test.com) en [kangax.github.io/compat-table/es6/](https://kangax.github.io/compat-table/es6/)
+#### Javascript
+Als Javascript het even niet doet kan de website nog steeds gebruikt worden doordat er dan een button verschijnt waardoor je de tussenstanden zelfstandig naar de server toe stuurt. Als Javascript het wel doet wordt dit automatisch gedaan en verdwijnt de button.
 
+Javascript             |  No Javascript
+:-------------------------:|:-------------------------:
+![](/readme/img/JS.png)  |  ![](/readme/img/no-JS.png)
 
-Schets eerst een wireflow met hoe de demo moet gaan werken en hoe het eruit komt te zien. Bepaal de functional, reliable, usable en pleasurable laag.
+#### Mouse/trackpad
+Mijn website is goed semantisch en daarom kan je met de tab op de juiste manier door de invoervelden gaan. Hij begint links bovenaan bij de score en gaat naar beneden om eerst het formulier van de thuisspelende ploeg in te vullen. Daarna gaat hij naar de uitspelende ploeg.
 
-* Ik wil een enquete kunnen invullen, met verschillende antwoord mogelijkheden
-* Ik wil de scores van sportwedstrijd kunnen bijhouden tijdens de wedstrijd
-* Ik wil een interval training opzetten om tijdens de training te kunnen gebruiken.
-* Ik wil een notificatie krijgen als mijn favoriete sportteam heeft gescoord.
-* Ik wil mijn eigen t-shirt-met-nerdy-tekst kunnen ontwerpen, printen, opslaan, en een volgende keer dat ik de site bezoek kunnen gebruiken.
-* Ik wil boodschappen-om-tostis-te-maken in mijn boodschappenlijstje kunnen gooien.
-* Ik wil de routebeschrijving van mijn huis tot aan het device lab stap voor stap kunnen zien.
-* Ik wil tijdens een college aan studenten een poll kunnen voorleggen en de resultaten meteen kunnen laten zien.
-* Ik wil kunnen beatboxen!
-* Ik wil tegen iemand anders een spelletje Pong spelen.
+## Browsers
+Ik heb mijn website grotendeels getest met Chrome omdat ik daar het meeste zelf mee werk. Maar ik weet dat Chrome ook het beste wordt ondersteund dus ben ik ook gaan kijken naar wat Firefox, Safari en Edge deden. Hieronder staan mijn bevindingen van de verschillende browsers
 
-
-
-Lezen
--
-
-
-
-### Criteria
-- De code staat in een repository op GitHub
-- Er is een Readme toegevoegd met daarin beschreven:
-  - Een (wireflow) schets van de functionaliteit met een beschrijving van de core functionality. Geef ook aan wat de  functional, reliable, usable en pleasurable laag.
-  - een beschrijving van de feature(s)/Browser Technologies
-  - welke browser de feature(s) wel/niet ondersteunen
-  - een beschrijving van de accessibility issues die zijn onderzocht
-- De demo is opgebouwd in 3 lagen, volgens het principe van Progressive Enhancement
-- De user experience van de demo is goed
-  - de leesbaarheidsregels zijn toegepast, contrast en kleuren kloppen
-  - het heeft een gebruiksvriendelijke interface, met gebruikmaking van affordance en feedback op de interactieve elementen
-  - met meest 'enhanced' versie is super vet, gaaf en h-e-l-e-maal te leuk om te gebruiken
-- Student kan de Basic functionaliteit van een use case doorgronden
-- Student kan uitleggen wat Progressive Enhancement en Feature Detectie is en hoe dit toe te passen in Web Development
+## Feature Detection
