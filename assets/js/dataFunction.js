@@ -9,7 +9,6 @@ exports.saveData = (obj) => {
   .value()
   db.write()
 }
-
 exports.getData = () => {
   return db.get('data')
   .value()

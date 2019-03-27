@@ -6,27 +6,39 @@ const bodyParser = require('body-parser')
 
 const dataFunction = require('./assets/js/dataFunction.js')
 
-// const routes = require('./assets/js/routeHandler.js')
-
 const app = express()
 const port = 3000
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname + '/assets'))
+app.use(bodyParser.json());
+app.use(express.static(__dirname + '/public'))
 
 app.get('/', (req, res, next) => {
   res.render('index', dataFunction.getData())
 })
+app.get('/start-time', (req, res, next) => {
+ dataFunction.startTime();
+  res.redirect('/')
+})
+app.get('/pause-time', (req, res, next) => {
+  dataFunction.pauseTime();
+  res.redirect('/')
+})
+
 app.post('/change-score', (req, res, next) => {
   const obj = {
     homeTeam: {
+      name: "Ajax",
+      logo: "/img/AFCA-logo.png",
       score: req.body.scoreHome,
       yellowCards: req.body.yellowCardsHome,
       redCards: req.body.redCardsHome,
       fouls: req.body.foulsHome,
     },
     awayTeam: {
+      name: "PSV",
+      logo: "/img/PSV-logo.png",
       score: req.body.scoreAway,
       yellowCards: req.body.yellowCardsAway,
       redCards: req.body.redCardsAway,
@@ -35,6 +47,10 @@ app.post('/change-score', (req, res, next) => {
   }
   dataFunction.saveData(obj)
   res.redirect('/');
+});
+
+app.post('/change-score-client', (req, res, next) => {
+  dataFunction.saveData(req.body)
 });
 
 // Server side

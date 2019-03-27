@@ -1,16 +1,20 @@
 {
   "data": {
     "homeTeam": {
-      "score": "6",
-      "yellowCards": "2",
-      "redCards": "2",
-      "fouls": "1"
+      "name": "Ajax",
+      "logo": "/img/AFCA-logo.png",
+      "score": 16,
+      "yellowCards": 17,
+      "redCards": 0,
+      "fouls": 0
     },
     "awayTeam": {
-      "score": "2",
-      "yellowCards": "1",
-      "redCards": "1",
-      "fouls": "1"
+      "name": "PSV",
+      "logo": "/img/PSV-logo.png",
+      "score": 6,
+      "yellowCards": 1,
+      "redCards": 2,
+      "fouls": 0
     }
   }
 }
