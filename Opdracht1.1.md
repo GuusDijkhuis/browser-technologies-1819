@@ -1,37 +1,31 @@
 # Browser Technologies
-## Opdracht 1.1 - Breek het web
-De 2 criteria waar ik onderzoek naar gedaan heb:
-- Kleur
-- Geen muis/trackpad/touchpad
 
-## Kleur
-### Welke problemen zijn er?
-Websites waar de kleuren niet goed zijn kunnen heel vervelend zijn voor de gebruiker als deze bijvoorbeeld kleurenblind is. De grootste problemen die kleurenblinden hebben zijn:
-- Het verkeerd lezen of begrijpen van grafieken en diagrammen
-- Color Pickers
-- Toggles
-- Error messages
-- Link
-- Contrasts
+## Summary
+Score is een applicatie waar je de verschillende gebeurtenissen van een voetbalwedstrijd kunt bijhouden.
 
-(Bron: `https://axesslab.com/colorblind-accessibility-web-fail-success-cases/`)
+![Score](readme/img/screenshot.png)
 
-Van alle mannen is 1 op de 12 erfelijke kleurenblind in tegenstelling tot de vrouwen waar 1 op de 250 kleurenblind is door ergelijke afwijking.
+## Table of contents
+- [Live demo](#Live-demo)
+- [Install](#Install)
+- [Concept](#Concept)
+  - [Wireflow](#Wireflow)
+- [Features](#Features)
+- [Feature detection](#Feature-detection)
+- [Progressive enhancement](#Progressive-enhancement)
+- [To do](#To-do)
+- [Resources](#Resources)
+- [Criteria](#Criteria)
 
-### Hoe zet je dit uit?
-Je kunt meerdere extensies gebruiken om kleurenblindheid na te  bootsen. Ik heb de extensie `Colorblinding` gebruikt om de testen uit te voeren.  
+## Live demo
+[Hier](https://guusdijkhuis.github.io/browser-technologies-1819/) is de link voor de live demo
 
-### Beschrijf hoe je dit kan fiksen
-Overal waar je met kleur moet uitleggen geef ook de labels weer. Zoal diagrammen, grafieken als colorpickers zijn hier goede voorbeelden voor.
+## Installation
+Als je mijn code wilt gebruiken kun je met de onderstaande mijn code clonen.
+`git clone https://github.com/GuusDijkhuis/browser-technologies-1819.git`
 
-### Voorbeeldwebsites
+## Concept
+![Wireflow](readme/img/wireflow.png)
+Als je een score wilt bijhouden dan kunt u dat doen door de score aan te passen met de pijltjes. De score wordt meestal automatisch opgeslagen maar er kan ook een opslaan knop staan.
 
-## Geen muis/trackpad/touchpad
-### Welke problemen zijn er?
-Websites waar je geen trackpad kan gebruiken zijn vervelend voor mensen met een fysieke beperking.
-
-### Hoe zet je dit uit?
-Ik heb voor mijn test een grote post-it geplakt op mijn touchpad waardoor ik echt mijn touchpad niet kan gebruiken.
-
-### Beschrijf hoe je dit kan fiksen
-Je met ervoor zorgen dat de website goed navigeert als je alleen met 1 knop werkt, bijvoorbeeld de `tab`. Dit kun je doen door de `:focus` 
+  
