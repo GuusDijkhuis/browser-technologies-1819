@@ -65,11 +65,11 @@ Voor HTML heb ik 1 fallback gemaakt omdat iedere tegenwoordige browser goede sup
   <details>
     <summary>Code</summary>
 
-    ```
-    main {
-        display: block
-    }
-    ```
+  ```
+  main {
+      display: block
+  }
+  ```
 
   </details>
   <details>
@@ -88,10 +88,10 @@ In mijn CSS heb ik veel fallbacks gemaakt zodat mijn styling geen problemen geef
   <details>
     <summary>Code</summary>
 
-    ```
-    color: #eeeeee;
-    color: rgba(238,238,238,1);
-    ```
+  ```
+  color: #eeeeee;
+  color: rgba(238,238,238,1);
+  ```
 
   </details>
 </details>
@@ -101,11 +101,11 @@ In mijn CSS heb ik veel fallbacks gemaakt zodat mijn styling geen problemen geef
   <details>
     <summary>Code</summary>
 
-    ```
-    -webkit-transition: all .15s ease;
-    -o-transition: all .15s ease;
-    transition: all .15s ease;
-    ```
+  ```
+  -webkit-transition: all .15s ease;
+  -o-transition: all .15s ease;
+  transition: all .15s ease;
+  ```
 
   </details>
 </details>
@@ -146,9 +146,9 @@ Tijdens het maken van de JavaScript code heb ik gelijk de code aangepast zodat d
   <details>
     <summary>Code</summary>
 
-    ```js
-    const inputArr = Array.prototype.slice.call(allInputs)
-    ```
+  ```js
+  const inputArr = Array.prototype.slice.call(allInputs)
+  ```
 
   </details>
 </details>
