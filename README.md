@@ -133,9 +133,11 @@ Tijdens het maken van de JavaScript code heb ik gelijk de code aangepast zodat d
     <summary>Code</summary>
 
     ```js
+
     inputArr.forEach(function(res) {
       res.addEventListener('change', pushData)
     })
+    
     ```
 
   </details>
@@ -147,7 +149,9 @@ Tijdens het maken van de JavaScript code heb ik gelijk de code aangepast zodat d
     <summary>Code</summary>
 
     ```js
+
     const inputArr = Array.prototype.slice.call(allInputs)
+
     ```
 
   </details>
