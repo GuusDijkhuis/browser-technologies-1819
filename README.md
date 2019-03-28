@@ -64,11 +64,13 @@ Voor HTML heb ik 1 fallback gemaakt omdat iedere tegenwoordige browser goede sup
   De main tag wordt niet goed gesupport door IE dus heb ik naar oplossingen gezocht en heb ik de `main` de onderstaande properties gegeven [1].
   <details>
     <summary>Code</summary>
+
     ```
     main {
         display: block
     }
     ```
+
   </details>
   <details>
     <summary>Bron</summary>
@@ -85,10 +87,12 @@ In mijn CSS heb ik veel fallbacks gemaakt zodat mijn styling geen problemen geef
   Ik kwam erachter dat ik veel RGBA gebruik om bepaalde kleuren weer te geven. Dit werkt echter niet goed op Inter Explorer 8 en ouder. In IE 5.5 en ouder wordt zelfs dan helemaal geen kleur getoond dus heb ik onderstaande fallback gemaakt om dit probleem op te vangen.
   <details>
     <summary>Code</summary>
+
     ```
     color: #eeeeee;
     color: rgba(238,238,238,1);
     ```
+
   </details>
 </details>
 <details>
@@ -96,11 +100,13 @@ In mijn CSS heb ik veel fallbacks gemaakt zodat mijn styling geen problemen geef
   Prefixes zijn ervoor om elke browser ondersteuning te bieden voor bepaalde css functies die nog niet volledig worden ondersteund doordat deze nog in een testfase zitten. Ik heb bijvoorbeeld bij de transition een vendor prefix toegevoegd.
   <details>
     <summary>Code</summary>
+
     ```
     -webkit-transition: all .15s ease;
     -o-transition: all .15s ease;
     transition: all .15s ease;
     ```
+
   </details>
 </details>
 <details>
@@ -108,9 +114,11 @@ In mijn CSS heb ik veel fallbacks gemaakt zodat mijn styling geen problemen geef
   Fonts zijn hartstikke leuk om te gebruiken maar wat nou als deze niet geladen kan worden? Dan heb je een probleem dus daar moet je een fallback voor maken. Ik heb ervoor gekozen dat als de font niet geladen kan worden dat er altijd teruggevallen kan worden op de `sans-serif` stijl omdat de default style ook een `sans-serif` lettertype is.
   <details>
     <summary>Code</summary>
+
   ```
   font-family: "Roboto", sans-serif;
   ```
+
   </details>
 </details>
 
@@ -123,11 +131,13 @@ Tijdens het maken van de JavaScript code heb ik gelijk de code aangepast zodat d
     Ik ben zelf gewent om mijn code te schrijven middels arrow functions. Maar dit wordt niet ondersteund in oudere browsers dus heb ik de code aangepast zodat de functions op de oudere manier geschreven zijn.
     <details>
       <summary>Code</summary>
-      ```
+
+      ```js
       inputArr.forEach(function(res) {
         res.addEventListener('change', pushData)
       })
       ```
+
     </details>
   </details>
   <details>
@@ -135,9 +145,11 @@ Tijdens het maken van de JavaScript code heb ik gelijk de code aangepast zodat d
     Doordat ik met een `querySelectorAll` alle inputfields ophaal krijg ik een `nodeList` terug. Om hier door heen te loopen wilde ik een `forEach` gebruiken maar dit kan niet omdat het geen `array` is. Daarom moet ik van de `nodeList` omzetten. Dit had ik eerst gedaan met een `Array.from()` maar dit werkt dus niet met ES5 dus heb ik dit omgebouwd door onderstaande code.
     <details>
       <summary>Code</summary>
+
       ```
       const inputArr = Array.prototype.slice.call(allInputs)
       ```
+      
     </details>
   </details>
 </details>
