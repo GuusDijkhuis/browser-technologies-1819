@@ -1,10 +1,12 @@
 const submitbtn = document.querySelector('#submit-btn').style.display = "none";
-const inputArr = Array.from(document.querySelectorAll('input[type=number]'))
+const allInputs = document.querySelectorAll('input[type=number]')
+
+const inputArr = Array.prototype.slice.call(allInputs)
+
 const Http = new XMLHttpRequest()
 const url = '/change-score-client'
 
-pushData = () => {
-
+function pushData() {
   const obj = {
     homeTeam: {
       name: "Ajax",
@@ -23,12 +25,11 @@ pushData = () => {
       fouls: Number(inputArr[7].value),
     }
   }
-  console.log(obj);
   Http.open("POST", url)
   Http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   Http.send(JSON.stringify(obj))
 }
 
-inputArr.forEach(res => {
+inputArr.forEach(function(res) {
   res.addEventListener('change', pushData)
 })

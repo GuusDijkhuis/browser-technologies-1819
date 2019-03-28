@@ -3,17 +3,17 @@
     "homeTeam": {
       "name": "Ajax",
       "logo": "/img/AFCA-logo.png",
-      "score": 16,
-      "yellowCards": 17,
+      "score": 2,
+      "yellowCards": 4,
       "redCards": 0,
       "fouls": 0
     },
     "awayTeam": {
       "name": "PSV",
       "logo": "/img/PSV-logo.png",
-      "score": 6,
-      "yellowCards": 1,
-      "redCards": 2,
+      "score": 1,
+      "yellowCards": 0,
+      "redCards": 0,
       "fouls": 0
     }
   }

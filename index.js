@@ -7,7 +7,7 @@ const bodyParser = require('body-parser')
 const dataFunction = require('./assets/js/dataFunction.js')
 
 const app = express()
-const port = 3000
+const port = 8080
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
