@@ -126,30 +126,29 @@ In mijn CSS heb ik veel fallbacks gemaakt zodat mijn styling geen problemen geef
 Tijdens het maken van de JavaScript code heb ik gelijk de code aangepast zodat deze ook werkt op de browsers die niet ES6 supporten zoals Internet Explorer.
 <br/>
 
+<details>
+  <summary>Arrow functions</summary>
+  Ik ben zelf gewent om mijn code te schrijven middels arrow functions. Maar dit wordt niet ondersteund in oudere browsers dus heb ik de code aangepast zodat de functions op de oudere manier geschreven zijn.
   <details>
-    <summary>Arrow functions</summary>
-    Ik ben zelf gewent om mijn code te schrijven middels arrow functions. Maar dit wordt niet ondersteund in oudere browsers dus heb ik de code aangepast zodat de functions op de oudere manier geschreven zijn.
-    <details>
-      <summary>Code</summary>
+    <summary>Code</summary>
 
-      ```js
-      inputArr.forEach(function(res) {
-        res.addEventListener('change', pushData)
-      })
-      ```
+    ```
+    inputArr.forEach(function(res) {
+      res.addEventListener('change', pushData)
+    })
+    ```
 
-    </details>
   </details>
+</details>
+<details>
+  <summary>Array.from</summary>
+  Doordat ik met een `querySelectorAll` alle inputfields ophaal krijg ik een `nodeList` terug. Om hier door heen te loopen wilde ik een `forEach` gebruiken maar dit kan niet omdat het geen `array` is. Daarom moet ik van de `nodeList` omzetten. Dit had ik eerst gedaan met een `Array.from()` maar dit werkt dus niet met ES5 dus heb ik dit omgebouwd door onderstaande code.
   <details>
-    <summary>Array.from</summary>
-    Doordat ik met een `querySelectorAll` alle inputfields ophaal krijg ik een `nodeList` terug. Om hier door heen te loopen wilde ik een `forEach` gebruiken maar dit kan niet omdat het geen `array` is. Daarom moet ik van de `nodeList` omzetten. Dit had ik eerst gedaan met een `Array.from()` maar dit werkt dus niet met ES5 dus heb ik dit omgebouwd door onderstaande code.
-    <details>
-      <summary>Code</summary>
+    <summary>Code</summary>
 
-      ```
-      const inputArr = Array.prototype.slice.call(allInputs)
-      ```
-      
-    </details>
+    ```
+    const inputArr = Array.prototype.slice.call(allInputs)
+    ```
+
   </details>
 </details>
