@@ -60,13 +60,14 @@ Voor de feature detection heb ik mijn HTML, CSS en JS doorgespit op code die mis
 Voor HTML heb ik 1 fallback gemaakt omdat iedere tegenwoordige browser goede support heeft gebruik voor HTML5.
 <br/>
 <details>
-  <summary>**Main**</summary>
+  <summary>Main</summary>
   De main tag wordt niet goed gesupport door IE dus heb ik naar oplossingen gezocht en heb ik de `main` de onderstaande properties gegeven [1].
   <details>
     <summary>Code</summary>
     ```
-    color: #eeeeee;
-    color: rgba(238,238,238,1);
+    main {
+        display: block
+    }
     ```
   </details>
   <details>
@@ -80,7 +81,7 @@ In mijn CSS heb ik veel fallbacks gemaakt zodat mijn styling geen problemen geef
 <br/>
 
 <details>
-  <summary>**RGBA**</summary>
+  <summary>RGBA</summary>
   Ik kwam erachter dat ik veel RGBA gebruik om bepaalde kleuren weer te geven. Dit werkt echter niet goed op Inter Explorer 8 en ouder. In IE 5.5 en ouder wordt zelfs dan helemaal geen kleur getoond dus heb ik onderstaande fallback gemaakt om dit probleem op te vangen.
   <details>
     <summary>Code</summary>
@@ -91,7 +92,7 @@ In mijn CSS heb ik veel fallbacks gemaakt zodat mijn styling geen problemen geef
   </details>
 </details>
 <details>
-  <summary>**Vendor prefixes**</summary>
+  <summary>Vendor prefixes</summary>
   Prefixes zijn ervoor om elke browser ondersteuning te bieden voor bepaalde css functies die nog niet volledig worden ondersteund doordat deze nog in een testfase zitten. Ik heb bijvoorbeeld bij de transition een vendor prefix toegevoegd.
   <details>
     <summary>Code</summary>
@@ -103,7 +104,7 @@ In mijn CSS heb ik veel fallbacks gemaakt zodat mijn styling geen problemen geef
   </details>
 </details>
 <details>
-  <summary>**Font fallback**</summary>
+  <summary>Font fallback</summary>
   Fonts zijn hartstikke leuk om te gebruiken maar wat nou als deze niet geladen kan worden? Dan heb je een probleem dus daar moet je een fallback voor maken. Ik heb ervoor gekozen dat als de font niet geladen kan worden dat er altijd teruggevallen kan worden op de `sans-serif` stijl omdat de default style ook een `sans-serif` lettertype is.
   <details>
     <summary>Code</summary>
@@ -118,7 +119,7 @@ Tijdens het maken van de JavaScript code heb ik gelijk de code aangepast zodat d
 <br/>
 
   <details>
-    <summary>**Arrow functions**</summary>
+    <summary>Arrow functions</summary>
     Ik ben zelf gewent om mijn code te schrijven middels arrow functions. Maar dit wordt niet ondersteund in oudere browsers dus heb ik de code aangepast zodat de functions op de oudere manier geschreven zijn.
     <details>
       <summary>Code</summary>
@@ -130,7 +131,7 @@ Tijdens het maken van de JavaScript code heb ik gelijk de code aangepast zodat d
     </details>
   </details>
   <details>
-    <summary>**Array.from**</summary>
+    <summary>Array.from</summary>
     Doordat ik met een `querySelectorAll` alle inputfields ophaal krijg ik een `nodeList` terug. Om hier door heen te loopen wilde ik een `forEach` gebruiken maar dit kan niet omdat het geen `array` is. Daarom moet ik van de `nodeList` omzetten. Dit had ik eerst gedaan met een `Array.from()` maar dit werkt dus niet met ES5 dus heb ik dit omgebouwd door onderstaande code.
     <details>
       <summary>Code</summary>
