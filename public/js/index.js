@@ -1,7 +1,7 @@
 var submitBtn, inputArr
 
 if (document.querySelector) {
-   submitBtn = document.querySelector('#submit-btn')
+    submitBtn = document.querySelector('#submit-btn')
   if (submitBtn.style) {
     submitBtn.style.display = "none";
   }
