@@ -67,59 +67,8 @@ body {
   color: rgba(238,238,238,1);
 }
 
-nav {
-  width: 100%;
-  color: #000000;
-  color: rgba(0,0,0,1);
-  background-color: #ffffff;
-  background-color: rgba(255, 255, 255,1);
-  display: block;
-}
-
-nav ul {
-  width: 100%;
-  padding: 16px 0;
-  padding: 1rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-nav ul li {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0 10%;
-  flex: 1 0 10%;
-  text-decoration: none;
-  width: 100%;
-  max-width: 60px;
-  max-width: 5rem;
-  padding: 8px 16px;
-  padding: .5rem 1rem;
-  margin: 0 16px;
-  margin: 0 1rem;
-  border-radius: 5px;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  background: #353c45;
-  background: rgba(53,60,69,1);
-  color: #ffffff;
-  color: rgba(255,255,255,1);
-  -webkit-transition: all .15s ease;
-  -o-transition: all .15s ease;
-  transition: all .15s ease;
-}
-nav ul li:hover,
-nav ul li:focus {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  -webkit-transition: all .15s ease;
-  -o-transition: all .15s ease;
-  transition: all .15s ease;
-}
-
 main {
-  width: 90%;
+  width: 100%;
   display: block;
   border-radius: 5px;
   margin: 0 auto;
@@ -149,9 +98,11 @@ main {
 }
 
 .logo > img {
-  width: 50%;
+  width: 20%;
   display: block;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .teamSection {
@@ -216,8 +167,30 @@ form input[type='submit'] {
   display: block;
 }
 
+/* Support display flex */
 @supports not (display: flex) {
   nav ul li {
-    display: inline-block;
+    /* display: inline-block; */
   }
+}
+
+
+#no-js-support-notification {
+  display: block;
+  /* position: fixed; */
+  right: 1rem;
+  right: 16px;
+  top: 1rem;
+  top: 16px;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  padding: 16px;
+  font-size: 1.25rem;
+  font-size: 20px;
+  background: rgb();
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: white;
+  /* border-radius: 5px; */
 }

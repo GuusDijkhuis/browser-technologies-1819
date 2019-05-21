@@ -8,14 +8,7 @@
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <a href="#content"><li>Skipt to content</li></a>
-        <a href="#"><li>Start</li></a>
-        <a href="#"><li>Pause</li></a>
-        <a href="#"><li>Finish</li></a>
-      </ul>
-    </nav>
+    <div id="no-js-support-notification">No JS Support</div>
     <main class="content" tabindex="-1">
       <section class="instruction-text">
         <h2>Houdt jouw score bij<h2>
@@ -31,7 +24,7 @@
           <!-- <h2>{{ homeTeam.name }}</h2> -->
           <label for="scoreHome">Score Home</label>
           <input type="number" id="scoreHome" class="inputField" name="scoreHome" min="0" max="50" value="{{ homeTeam.score }}">
-          <label for="yellowCardsHome">Yellow Cards Home</label>
+          <label for="yellowCardsHome">Yellow Cards</label>
           <input type="number" id="yellowCardsHome" class="inputField" name="yellowCardsHome" min="0" max="22" value="{{ homeTeam.yellowCards }}">
           <label for="redCardsHome">Red Cards Home</label>
           <input type="number" id="redCardsHome" class="inputField" name="redCardsHome" min="0" max="5" value="{{ homeTeam.redCards }}">
