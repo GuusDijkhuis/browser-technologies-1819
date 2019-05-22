@@ -3,8 +3,8 @@
     "homeTeam": {
       "name": "Ajax",
       "logo": "/img/AFCA-logo.png",
-      "score": 3,
-      "yellowCards": 5,
+      "score": 2,
+      "yellowCards": 6,
       "redCards": 1,
       "fouls": 1
     },

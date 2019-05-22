@@ -69,14 +69,9 @@ if (document) {
             inputArr[i].attachEvent('onchange', pushData)
         }
     }
-    
 }
 
-
-
-
-
-// regEx for input type fallback, IE<10 doesn't have [input=number]
+// regEx for input type fallback, IE<10 doesn't have [input=number] so the fallback is a textboxwhere you can insert some random characters...
 function regExNumbers(data) {
     var reg = new RegExp('^[0-9]+$');
     return reg.test(data)

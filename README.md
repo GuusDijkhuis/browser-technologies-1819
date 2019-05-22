@@ -127,27 +127,82 @@ Tijdens het maken van de JavaScript code heb ik gelijk de code aangepast zodat d
 <br/>
 
 <details>
-  <summary>Arrow functions</summary>
-  Ik ben zelf gewent om mijn code te schrijven middels arrow functions. Maar dit wordt niet ondersteund in oudere browsers dus heb ik de code aangepast zodat de functions op de oudere manier geschreven zijn.
+  <summary>querySelectorAll</summary>
+  In onderstaande code kun je zien dat ik kijk of `querySelectorAll` gesupport wordt en als dit wel het geval is dan haalt de gebruiker alle inputs op door middel van de `querySelectorAll`. Als dit niet het geval is dan kijkt deze naar alle elementen met de classname `inputField`
+
   <details>
     <summary>Code</summary>
 
   ```js
-  inputArr.forEach(function(res) {
-    res.addEventListener('change', pushData)
-  })
+    if (document.querySelectorAll) {
+      var allInputs = document.querySelectorAll('input')
+    } else {
+      var allInputs = document.getElementsByClassName('inputField')
+    }
   ```
 
   </details>
 </details>
+
 <details>
-  <summary>Array.from</summary>
-  Doordat ik met een `querySelectorAll` alle inputfields ophaal krijg ik een `nodeList` terug. Om hier door heen te loopen wilde ik een `forEach` gebruiken maar dit kan niet omdat het geen `array` is. Daarom moet ik van de `nodeList` omzetten. Dit had ik eerst gedaan met een `Array.from()` maar dit werkt dus niet met ES5 dus heb ik dit omgebouwd door onderstaande code.
+  <summary>forEach</summary>
+  Omdat ik door de inputs wil loopen wilde ik eerst een `forEach` loop gebruiken maar dit heb ik aangepast omdat forEach niet goed wordt ondersteund bij oudere browsers en helemaal niet wordt ondersteund door IE8 of lager. Daarom heb ik besloten om een andere loop te gebruiken, de wel bekende `for` loop.
   <details>
     <summary>Code</summary>
 
   ```js
-  const inputArr = Array.prototype.slice.call(allInputs)
+    for(var i = 0; i < inputArr.length; i++) {
+      ...
+    }
+  ```
+
+  </details>
+</details>
+
+<details>
+  <summary>Array.from()</summary>
+  Doordat bij een `querySelectorAll()` of `getElementsByClassName()` een nodelist uitkomt moet je deze eerst omzetten naar een array. Dit kun je doen door `Array.from()` te gebruiken. IE ondersteund dit niet en daar moet een feature detection voor komen om te kijken of de browser deze ondersteund. Als deze niet wordt ondersteund dan moet `Array.prototype.slice.call()` gebruikt worden.
+  <details>
+    <summary>Code</summary>
+
+  ```js
+    if (Array.from) {
+      inputArr = Array.from(allInputs)
+    } else {
+      inputArr = Array.prototype.slice.call(allInputs)
+    }
+  ```
+
+  </details>
+</details>
+
+<details>
+  <summary>regEx function</summary>
+  Ik heb een regEx function gemaakt omdat als je op oudere browser de website bekijkt dan wordt de number input field niet ondersteund en wordt deze uiteindelijk opgevangen door de wel ondersteunde text input field. In deze textboxen kunnen ook andere characters dan cijfers ingevoerd worden dus daarom voor ik een regEx uit.
+  <details>
+    <summary>Code</summary>
+
+  ```js
+  function regExNumbers(data) {
+      var reg = new RegExp('^[0-9]+$');
+      return reg.test(data)
+  }
+  ```
+
+  </details>
+</details>
+
+
+<details>
+  <summary>Arrow functions</summary>
+  Ik ben zelf gewent om mijn code te schrijven middels arrow functions. Maar dit wordt niet ondersteund in oudere browsers dus heb ik de code aangepast zodat de functions op de oudere manier geschreven zijn. Hieronder een voorbeeld van een functie na aanpassing.
+  <details>
+    <summary>Code</summary>
+
+  ```js
+  function regExNumbers(data) {
+    ...
+  }
   ```
 
   </details>
